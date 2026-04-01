@@ -1,0 +1,79 @@
+/* static/css/libadwaita.css */
+
+/* 1. Libadwaita Base Typography and Rounding */
+:root {
+    --adw-border-radius: 12px;
+    --adw-button-radius: 8px;
+    --adw-input-radius: 8px;
+}
+
+/* 2. Soften the main application cards to mimic AdwBoxedList */
+#main content > div > div.bg-white,
+#main content > div > div.dark\:bg-gray-900 {
+    border-radius: var(--adw-border-radius) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid rgba(128, 128, 128, 0.1) !important;
+    overflow: hidden;
+}
+
+/* 3. GTK4 Style Inputs (Flat background, rounded, subtle borders) */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    border-radius: var(--adw-input-radius) !important;
+    background-color: rgba(128, 128, 128, 0.05) !important;
+    border: 1px solid rgba(128, 128, 128, 0.2) !important;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: transparent !important;
+    border-color: var(--color-primary-500) !important;
+    box-shadow: 0 0 0 3px rgba(165, 210, 126, 0.2) !important; /* Glow based on your olive hex */
+}
+
+/* 4. Pill-shaped action buttons (Libadwaita headerbar style) */
+button,
+.button,
+a.bg-primary-600,
+input[type="submit"] {
+    border-radius: var(--adw-button-radius) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease !important;
+}
+
+button:active,
+.button:active,
+input[type="submit"]:active {
+    transform: scale(0.96) !important; /* Libadwaita active click state */
+    filter: brightness(0.9);
+}
+
+/* 5. Sidebar Tweaks - Floating navigation items */
+aside nav ul li a {
+    border-radius: 8px !important;
+    margin: 0 8px !important;
+    padding-left: 12px !important;
+}
+
+/* 6. Dark Mode Adjustments for the Olive Green */
+.dark body {
+    /* Using the darkest olive shade for the absolute background */
+    background-color: #0e120a !important;
+}
+
+.dark #main content > div > div.dark\:bg-gray-900 {
+    /* Using the 950 shade for cards */
+    background-color: #161d10 !important;
+    border: 1px solid #3a4a2b !important;
+}
