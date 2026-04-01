@@ -1,0 +1,41 @@
+# --- KINETIC ENV DJANGO GITIGNORE ---
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Databases
+# NOTE: Comment the line below if you want to push your SQLite file to Render
+db.sqlite3
+*.db-journal
+
+# Django Secrets & Environments
+.env
+.venv
+env/
+venv/
+ENV/
+pyvenv.cfg
+
+# Static & Media
+# We ignore collected static files because build.sh generates them on Render
+staticfiles/
+media/
+
+# Distribution / Data
+.python-version
+celerybeat-schedule
+*.log
+
+# IDE specific settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- END OF TRANSMISSION ---
