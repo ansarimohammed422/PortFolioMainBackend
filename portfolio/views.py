@@ -72,7 +72,7 @@ class ContactViewSet(viewsets.ModelViewSet):
                 message=message,
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=[settings.ADMIN_EMAIL],
-                fail_silently=False,  # Set to True in production so API doesn't crash if email fails
+                fail_silently=True,  # Set to True in production so API doesn't crash if email fails
             )
         except Exception as e:
             # If the email fails (e.g., bad password), log it, but the DB save still worked
