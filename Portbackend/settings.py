@@ -237,8 +237,9 @@ UNFOLD = {
 }
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_PORT = 465  # CHANGED from 587
+EMAIL_USE_SSL = True
+# EMAIL_USE_TLS = True
 
 # The email address that will SEND the notification
 EMAIL_HOST_USER = "ansarimohammed122@gmail.com"
