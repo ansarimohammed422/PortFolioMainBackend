@@ -252,3 +252,4 @@ EMAIL_HOST_PASSWORD = "qoaf mcsd jans idns"
 # The email address where you want to RECEIVE the notifications
 # (This can be the exact same address as EMAIL_HOST_USER)
 ADMIN_EMAIL = "ansarimohammed122@gmail.com"
+EMAIL_TIMEOUT = 10
