@@ -86,7 +86,9 @@ from django.core.mail import send_mail
 
 
 class ContactViewSet(viewsets.ModelViewSet):  # (Or whatever your class is named)
-    # ... your queryset and serializer_class ...
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+    http_method_names = ["post"]
 
     def perform_create(self, serializer):
         # 1. Save the message to the database INSTANTLY
