@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "portfolio",
     "rest_framework",
     "corsheaders",
+    "blog",
 ]
 
 MIDDLEWARE = [

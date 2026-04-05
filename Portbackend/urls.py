@@ -50,6 +50,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
+from blog.views import BlogViewSet  # <-- IMPORT THIS
 from portfolio.views import (
     CertificateViewSet,
     ContactViewSet,
@@ -68,6 +69,7 @@ router.register(r"experience", ExperienceViewSet)
 router.register(r"education", EducationViewSet)
 router.register(r"certificates", CertificateViewSet)
 router.register(r"contact", ContactViewSet)
+router.register(r"blogs", BlogViewSet, basename="blog")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
